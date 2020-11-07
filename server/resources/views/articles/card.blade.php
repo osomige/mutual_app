@@ -82,7 +82,7 @@
         endpoint="{{ route('articles.like', ['article' => $article]) }}"
         >
         </article-like>
-        {{-- ArticleLike.vueが呼び出される --}}
+        {{-- ArticleLike.vueが呼び出すやつ --}}
     </div>
     </div>
 </div>
