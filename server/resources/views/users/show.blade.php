@@ -34,8 +34,27 @@
                 <a href="" class="text-muted">
                     10 フォロワー
                 </a>
+                
             </div>
         </div>
     </div>
+    {{-- マイページにIDと紐付けた投稿をもってくる --}}
+    <ul class="nav nav-tabs nav-justified mt-3">
+        <li class="nav-item">
+            <a class="nav-link text-muted active"
+            href="{{ route('users.show', ['name' => $user->name]) }}">
+            記事
+            </a>
+        </li>
+        <li class="nav-item">
+        {{-- <a class="nav-link text-muted"
+        href="">
+        いいね
+            </a>
+        </li> --}}
+</ul>
+@foreach($articles as $article)
+@include('articles.card')
+@endforeach
 </div>
 @endsection

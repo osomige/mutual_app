@@ -14,7 +14,7 @@
         </div>
         
         @if( Auth::id() === $article->user_id )
-        <!-- dropdown -->
+        <!-- dropdownの記事変更画面の表示設定 -->
         <div class="ml-auto card-text">
             <div class="dropdown">
                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +31,6 @@
                 </div>
             </div>
         </div>
-        <!-- dropdown -->
         
         <!-- modal -->
         <div id="modal-delete-{{ $article->id }}" class="modal fade" tabindex="-1" role="dialog">
@@ -69,6 +68,7 @@
         <div class="card-text">
             {{ $article->body }}
         </div>
+        <img src="{{ $article->img_path }}" class="square-img">
         {{-- <div class="card-photo">
             {{ $article->img_url}}
         </div> --}}
