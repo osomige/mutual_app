@@ -11,10 +11,12 @@ class UserController extends Controller
     {
         $user = User::where('name', $name)->first();
         $articles = $user->articles->sortByDesc('created_at');
+        
 
         return view('users.show', [
             'user' => $user,
             'articles' => $articles,
+            // 'img_path' => $img_path,
         ]);
     }
         public function follow(Request $request, string $name)

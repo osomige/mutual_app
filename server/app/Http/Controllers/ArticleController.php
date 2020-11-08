@@ -20,6 +20,17 @@ class ArticleController extends Controller
     }
     public function store(ArticleRequest $request, Article $article)
     {
+        if ($file = $request->img_path) {
+            $fileName =$file->getClientOriginalName();
+            $target_path = public_path('storage/diet_img/');
+            $filename = $request->img_path->storeAs('public/diet_img', $fileName);
+        } else {
+            $fileName = "";
+        }
+        
+        // dd($article->img_path);
+        $article->img_path = 'storage/diet_img/' . $fileName;
+
         $article->title = $request->title;
         $article->body = $request->body;
         $article->user_id = $request->user()->id;

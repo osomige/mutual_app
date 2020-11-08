@@ -68,10 +68,7 @@
         <div class="card-text">
             {{ $article->body }}
         </div>
-        <img src="{{ $article->img_path }}" class="square-img">
-        {{-- <div class="card-photo">
-            {{ $article->img_url}}
-        </div> --}}
+        <img alt="ロゴ" src="{{ asset($article->img_path) }}" class="square-img">
     </div>
     <div class="card-body pt-0 pb-2 pl-3">
     <div class="card-text">

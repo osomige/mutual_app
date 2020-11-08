@@ -46,13 +46,10 @@
             記事
             </a>
         </li>
-        <li class="nav-item">
-        {{-- <a class="nav-link text-muted"
-        href="">
-        いいね
-            </a>
-        </li> --}}
-</ul>
+        
+    </ul>
+    {{-- <img alt="ロゴ" src="{{ asset('/storage/diet_img/3.jpg') }}"> --}}
+
 @foreach($articles as $article)
 @include('articles.card')
 @endforeach
